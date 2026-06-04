@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/Usuario/Downloads/fernando-camusso_6.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fernando Camusso — Economista</title>
+  <link href="./Fernando Camusso — Economista_files/css2" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #1A1A1A;
+      --bg2: #222222;
+      --bg3: #282828;
+      --accent: #E8C547;
+      --accent2: #F0D060;
+      --cream: #F0EBE0;
+      --warm: #FAF7F2;
+      --muted: #A0A0A0;
+      --muted2: #888888;
+      --border: rgba(232,197,71,0.2);
+      --border2: rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* GRAIN */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 5vw;
+      background: rgba(26,26,26,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border2);
+    }
+
+    .nav-logo {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #BBBBBB;
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 72px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 5vw 5rem 5vw;
+      position: relative;
+      z-index: 2;
+      border-right: 1px solid var(--border2);
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: grayscale(30%) contrast(1.1);
+      mix-blend-mode: luminosity;
+      opacity: 0.85;
+    }
+
+    .hero-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%), 
+                  linear-gradient(to right, var(--bg) 0%, transparent 20%),
+                  linear-gradient(to top, var(--bg) 0%, transparent 30%);
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-tag-line {
+      width: 2.5rem;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero-tag-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 4.5vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--warm);
+      margin-bottom: 1.8rem;
+      letter-spacing: -0.01em;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 460px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--warm);
+      padding: 0.9rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.25s, transform 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--cream);
+      padding: 0.9rem 2rem;
+      border: 1px solid var(--border2);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.25s, color 0.25s;
+    }
+
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border2);
+      padding-top: 2.5rem;
+      gap: 0;
+    }
+
+    .hero-stat {
+      padding-right: 2rem;
+      border-right: 1px solid var(--border2);
+    }
+
+    .hero-stat:last-child { border-right: none; padding-right: 0; padding-left: 2rem; }
+    .hero-stat:nth-child(2) { padding-left: 2rem; }
+
+    .stat-n {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-l {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: #E8C547;
+      padding: 0.7rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-inner {
+      display: inline-flex;
+      gap: 0;
+      animation: ticker 30s linear infinite;
+    }
+
+    .ticker-item {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #1A1A1A;
+      padding: 0 2.5rem;
+    }
+
+    .ticker-dot {
+      color: rgba(26,26,26,0.35);
+      padding: 0 0.5rem;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── SECTIONS ── */
+    .section-wrap {
+      padding: 7rem 5vw;
+      position: relative;
+    }
+
+    .section-wrap.alt { background: var(--bg2); }
+    .section-wrap.dark { background: var(--bg3); }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      border-bottom: 1px solid var(--border2);
+      padding-bottom: 1.5rem;
+    }
+
+    .section-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--warm);
+      line-height: 1.15;
+      flex: 1;
+    }
+
+    h2 em { font-style: italic; color: var(--accent); }
+
+    /* ── ABOUT ── */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+    }
+
+    .about-photo-wrap img {
+      width: 100%;
+      display: block;
+      filter: grayscale(20%) contrast(1.05);
+    }
+
+    .about-photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: -12px; left: -12px;
+      right: 12px; bottom: 12px;
+      border: 1px solid var(--border);
+      z-index: -1;
+    }
+
+    .about-photo-cap {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(26,26,26,0.95) 0%, transparent 100%);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .about-content p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+
+    .about-content p strong { color: var(--cream); font-weight: 500; }
+
+    .quote-pull {
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .quote-pull p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--warm) !important;
+      line-height: 1.65;
+      margin-bottom: 0.6rem !important;
+    }
+
+    .quote-pull cite {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .pillars-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      margin-top: 2.5rem;
+      background: var(--border2);
+    }
+
+    .pillar {
+      background: var(--bg);
+      padding: 1.5rem;
+      transition: background 0.25s;
+    }
+
+    .pillar:hover { background: var(--bg3); }
+
+    .pillar-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--accent);
+      letter-spacing: 0.14em;
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar-title {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--warm);
+      margin-bottom: 0.4rem;
+    }
+
+    .pillar-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── MEDIOS ── */
+    .media-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: 1px solid var(--border2);
+      margin-bottom: 4rem;
+    }
+
+    .media-item {
+      padding: 1.8rem 1rem;
+      text-align: center;
+      border-right: 1px solid var(--border2);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      color: var(--muted2);
+      letter-spacing: 0.03em;
+      transition: color 0.25s, background 0.25s;
+      cursor: default;
+    }
+
+    .media-item:last-child { border-right: none; }
+    .media-item:hover { color: var(--warm); background: rgba(255,255,255,0.06); }
+
+    /* CANAL E BLOCK */
+    .canal-e-wrap {
+      border: 1px solid var(--border);
+      margin-bottom: 4rem;
+    }
+
+    .canal-e-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background: rgba(255,255,255,0.08);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .canal-e-head-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .canal-e-head-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .canal-e-list { display: flex; flex-direction: column; }
+
+    .canal-e-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 28px;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.1rem 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .canal-e-row:last-child { border-bottom: none; }
+    .canal-e-row:hover { background: rgba(255,255,255,0.06); }
+
+    .ce-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--muted2);
+      text-transform: uppercase;
+    }
+
+    .ce-title {
+      font-size: 0.88rem;
+      color: var(--cream);
+      line-height: 1.5;
+      transition: color 0.2s;
+    }
+
+    .canal-e-row:hover .ce-title { color: var(--accent2); }
+
+    .ce-arr {
+      font-size: 0.9rem;
+      color: var(--muted2);
+      text-align: right;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .canal-e-row:hover .ce-arr { color: var(--accent); transform: translate(2px,-2px); }
+
+    /* OTRAS NOTAS */
+    .notes-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .notes-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border2);
+    }
+
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border2);
+    }
+
+    .note-card {
+      background: var(--bg);
+      padding: 2rem;
+      text-decoration: none;
+      display: block;
+      transition: background 0.25s;
+      position: relative;
+    }
+
+    .note-card:hover { background: var(--bg3); }
+
+    .note-src {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .note-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--warm);
+      line-height: 1.55;
+      margin-bottom: 1.2rem;
+    }
+
+    .note-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .note-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--muted2);
+    }
+
+    .note-arr {
+      font-size: 0.85rem;
+      color: var(--muted2);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .note-card:hover .note-arr { color: var(--accent); transform: translate(2px,-2px); }
+
+    /* ── NEWSLETTER ── */
+    .nl-block {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+      padding: 4rem;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nl-block::before {
+      content: '"';
+      position: absolute;
+      right: 2rem;
+      top: -2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 18rem;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .nl-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .nl-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--warm);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .nl-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 520px;
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border2);
+    }
+
+    .contact-card {
+      background: var(--bg);
+      padding: 2.5rem 2rem;
+      text-decoration: none;
+      transition: background 0.25s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-card:hover { background: var(--bg3); }
+
+    .contact-type {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .contact-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--warm);
+    }
+
+    .contact-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ── NEWSLETTER EDICIONES ── */
+    .nl-editions-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 3rem 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nl-editions-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border2);
+    }
+
+    .nl-editions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border2);
+    }
+
+    .nl-card {
+      background: var(--bg);
+      padding: 2.5rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: background 0.25s;
+    }
+
+    .nl-card:hover { background: #1e1e1e; }
+
+    .nl-card-featured {
+      background: rgba(232,197,71,0.05);
+      border-left: 3px solid var(--accent);
+    }
+
+    .nl-card-featured:hover { background: rgba(232,197,71,0.09); }
+
+    .nl-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nl-card-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .nl-card-arr {
+      font-size: 1rem;
+      color: var(--muted2);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .nl-card:hover .nl-card-arr { color: var(--accent); transform: translate(3px,-3px); }
+
+    .nl-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--warm);
+      line-height: 1.5;
+    }
+
+    .nl-card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .nl-card-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      color: var(--muted2);
+      text-transform: uppercase;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border2);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 5vw;
+      border-top: 1px solid var(--border2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-l {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--muted2);
+    }
+
+    .footer-r {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      color: rgba(100,100,100,0.5);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-tag  { animation: fadeUp 0.7s 0.1s ease both; }
+    h1         { animation: fadeUp 0.7s 0.25s ease both; }
+    .hero-desc { animation: fadeUp 0.7s 0.4s ease both; }
+    .hero-cta  { animation: fadeUp 0.7s 0.5s ease both; }
+    .hero-stats{ animation: fadeUp 0.7s 0.65s ease both; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 1.2rem 5vw; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 5rem 5vw 3rem; border-right: none; border-bottom: 1px solid var(--border2); }
+      .hero-right { height: 60vw; }
+      .hero-stats { grid-template-columns: repeat(3,1fr); }
+      .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .pillars-row { grid-template-columns: 1fr; }
+      .media-strip { grid-template-columns: repeat(3,1fr); }
+      .notes-grid { grid-template-columns: 1fr; }
+      .nl-editions { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-wrap { padding: 5rem 5vw; }
+      footer { flex-direction: column; gap: 0.6rem; text-align: center; }
+      .canal-e-row { grid-template-columns: 60px 1fr 20px; gap: 1rem; }
+    }
+
+    @media (max-width: 600px) {
+      .media-strip { grid-template-columns: 1fr 1fr; }
+      .hero-stats { grid-template-columns: 1fr; gap: 1.5rem; }
+      .hero-stat { border-right: none; border-bottom: 1px solid var(--border2); padding: 0 0 1.5rem; }
+      .hero-stat:last-child { border-bottom: none; padding: 1.5rem 0 0; }
+      .hero-stat:nth-child(2) { padding: 1.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">FC · Fernando Camusso</div>
+  <ul class="nav-links">
+    <li><a href="file:///C:/Users/Usuario/Downloads/fernando-camusso_6.html#sobre-mi">Sobre mí</a></li>
+    <li><a href="file:///C:/Users/Usuario/Downloads/fernando-camusso_6.html#medios">Medios</a></li>
+    <li><a href="file:///C:/Users/Usuario/Downloads/fernando-camusso_6.html#newsletter">Newsletter</a></li>
+    <li><a href="file:///C:/Users/Usuario/Downloads/fernando-camusso_6.html#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <div class="hero-tag-text">Economista · Analista · Rafaela Capital</div>
+    </div>
+    <h1>La macro argentina<br>traducida en<br><em>decisiones reales.</em></h1>
+    <p class="hero-desc">
+      Economista y director de Rafaela Capital. Analizo los momentos críticos del mercado argentino y los convierto en estrategia concreta para patrimonios e inversores locales y globales.
+    </p>
+    <div class="hero-cta">
+      <a href="file:///C:/Users/Usuario/Downloads/fernando-camusso_6.html#newsletter" class="btn-primary">Suscribirse al newsletter</a>
+      <a href="file:///C:/Users/Usuario/Downloads/fernando-camusso_6.html#contacto" class="btn-ghost">Consultas de medios</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-n">+20</div>
+        <div class="stat-l">Años de experiencia</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-n">5</div>
+        <div class="stat-l">Medios nacionales</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-n">RFC</div>
+        <div class="stat-l">Rafaela Capital</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="file:///C:/Users/Usuario/Downloads/foto-hero.jpg" alt="Fernando Camusso">
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">El Cronista</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">La Nación</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">CNN Radio</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Radio Mitre</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Canal E · Perfil</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Volatilidad cambiaria</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Mercados de capitales</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Rafaela Capital</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">El Cronista</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">La Nación</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">CNN Radio</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Radio Mitre</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Canal E · Perfil</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Volatilidad cambiaria</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Mercados de capitales</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Rafaela Capital</span><span class="ticker-dot">·</span>
+  </div>
+</div>
+
+<!-- SOBRE MÍ -->
+<section class="section-wrap" id="sobre-mi">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2>Economista. Analista.<br><em>Director de Rafaela Capital.</em></h2>
+  </div>
+  <div class="about-layout">
+    <div class="about-photo-wrap">
+      <img src="file:///C:/Users/Usuario/Downloads/foto-about.jpg" alt="Fernando Camusso — Rafaela Capital">
+      <div class="about-photo-cap">Rafaela Capital · Santa Fe · Argentina</div>
+    </div>
+    <div class="about-content">
+      <p>
+        Soy economista, director de <strong>Rafaela Capital</strong> y analista de mercados financieros con más de veinte años de experiencia. Mi especialidad es la <strong>volatilidad cambiaria</strong> y los momentos críticos del mercado argentino — los que exigen decisión cuando el consenso todavía duda.
+      </p>
+      <p>
+        Soy <strong>profesor universitario</strong> y aparezco regularmente en medios nacionales como El Cronista, La Nación, CNN Radio, Radio Mitre y Canal E. Mi análisis combina rigor técnico con visión de mercado, orientado a inversores locales y globales con exposición a Argentina.
+      </p>
+      <div class="quote-pull">
+        <p>"La macro argentina tiene una lógica propia. Entenderla es la diferencia entre reaccionar y anticipar."</p>
+        <cite>— Fernando Camusso</cite>
+      </div>
+      <div class="pillars-row">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title">+20 años de experiencia</div>
+          <div class="pillar-desc">Trayectoria en consultoría, docencia y mercados financieros.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title">Analista en medios nacionales</div>
+          <div class="pillar-desc">Presencia regular en El Cronista, La Nación, CNN Radio, Radio Mitre y Canal E.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title">Profesor universitario</div>
+          <div class="pillar-desc">Docencia activa que mantiene el rigor técnico como estándar.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">04</div>
+          <div class="pillar-title">Fundador de Rafaela Capital</div>
+          <div class="pillar-desc">Una boutique financiera para inversores locales y globales con exposición a Argentina.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIOS -->
+<section class="section-wrap alt" id="medios">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>Análisis citado en los<br><em>principales medios.</em></h2>
+  </div>
+
+  <div class="media-strip">
+    <div class="media-item">El Cronista</div>
+    <div class="media-item">La Nación</div>
+    <div class="media-item">CNN Radio</div>
+    <div class="media-item">Radio Mitre</div>
+    <div class="media-item">Canal E · Perfil</div>
+  </div>
+
+  <div class="canal-e-wrap">
+    <div class="canal-e-head">
+      <div class="canal-e-head-title">Canal E · Perfil — Apariciones 2025–2026</div>
+      <div class="canal-e-head-sub">Análisis semanal de coyuntura</div>
+    </div>
+    <div class="canal-e-list">
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-para-el-mercado-todavia-tenemos-un-tipo-de-cambio-nominal-en-cuasi-equilibrio.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Jun 2026</span>
+        <span class="ce-title">"Para el mercado todavía tenemos un tipo de cambio nominal en cuasi equilibrio"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-la-tasa-americana-en-459-es-algo-negativo-para-emergentes-sobre-todo-para-mercados-como-el-nuestro.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">May 2026</span>
+        <span class="ce-title">"La tasa americana en 4.59 es algo negativo para emergentes, sobre todo para mercados como el nuestro"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-vos-necesitas-poder-bajar-el-riesgo-pais-para-salir-a-los-mercados.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">May 2026</span>
+        <span class="ce-title">"Vos necesitás poder bajar el riesgo país para salir a los mercados"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-es-posible-que-el-salario-real-empiece-a-recuperarse-conforme-la-tasa-de-inflacion.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">May 2026</span>
+        <span class="ce-title">"Es posible que el salario real empiece a recuperarse conforme la tasa de inflación"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-no-va-a-ser-tan-facil-bajar-el-nivel-de-morosidad-conforme-las-familias-necesitan-seguir-endeudandose.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Abr 2026</span>
+        <span class="ce-title">"No va a ser tan fácil bajar el nivel de morosidad conforme las familias necesitan seguir endeudándose"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-los-mercados-afuera-volvieron-a-abrir-dificiles-wall-street-abrio-abajo-y-el-petroleo-subiendo.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Mar 2026</span>
+        <span class="ce-title">"Los mercados afuera volvieron a abrir difíciles. Wall Street abrió abajo y el petróleo subiendo"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-si-el-objetivo-va-a-ser-desinflar-esta-economia-el-problema-es-que-tenes-una-politica-monetaria-muy-contractiva.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Mar 2026</span>
+        <span class="ce-title">"Si el objetivo va a ser desinflar esta economía, el problema es que tenés una política monetaria muy contractiva"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-en-la-meta-con-el-fondo-monetario-internacional-estas-en-el-quinto-subsuelo.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Feb 2026</span>
+        <span class="ce-title">"En la meta con el FMI estás en el quinto subsuelo"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-tenemos-que-empezar-a-ver-este-ano-una-vuelta-a-los-mercados-voluntarios-de-deuda.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Ene 2026</span>
+        <span class="ce-title">"Tenemos que empezar a ver este año una vuelta a los mercados voluntarios de deuda"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-decir-que-volvimos-a-los-mercados-internacionales-es-publicidad.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Dic 2025</span>
+        <span class="ce-title">"Decir que volvimos a los mercados internacionales es publicidad"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+      <a class="canal-e-row" href="https://www.perfil.com/noticias/canal-e/fernando-camusso-el-mercado-de-bonos-no-esta-mirando-la-macro.phtml" target="_blank" rel="noopener">
+        <span class="ce-date">Sep 2025</span>
+        <span class="ce-title">"El mercado de bonos no está mirando la macro"</span>
+        <span class="ce-arr">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="notes-label">Otras publicaciones</div>
+  <div class="notes-grid">
+    <a class="note-card" href="https://www.cronista.com/finanzas-mercados/el-dolar-no-para-de-caer-por-que-baja-y-hasta-cuando-se-mantendra-la-tendencia/" target="_blank" rel="noopener">
+      <div class="note-src">El Cronista</div>
+      <div class="note-title">El dólar no para de caer: por qué baja y hasta cuándo se mantendrá la tendencia</div>
+      <div class="note-footer"><span class="note-date">Abr 2026</span><span class="note-arr">↗</span></div>
+    </a>
+    <a class="note-card" href="https://www.cronista.com/finanzas-mercados/dolar-en-caida-libre-que-bonos-recomiendan-para-aprovechar-el-super-peso/" target="_blank" rel="noopener">
+      <div class="note-src">El Cronista</div>
+      <div class="note-title">Dólar en caída libre: qué bonos recomiendan para aprovechar el "súper peso"</div>
+      <div class="note-footer"><span class="note-date">Feb 2026</span><span class="note-arr">↗</span></div>
+    </a>
+    <a class="note-card" href="https://www.cronista.com/economia-politica/el-juego-de-las-bandas-la-amenaza-de-un-salto-de-precios-que-divide-a-los-economistas/" target="_blank" rel="noopener">
+      <div class="note-src">El Cronista</div>
+      <div class="note-title">Cambios en las bandas: los cálculos sobre el impacto en precios que dividen a los economistas</div>
+      <div class="note-footer"><span class="note-date">Ene 2026</span><span class="note-arr">↗</span></div>
+    </a>
+    <a class="note-card" href="https://www.cronista.com/finanzas-mercados/dolar-que-va-a-pasar-tras-las-elecciones-y-como-podria-reaccionar-el-mercado-segun-este-respetado-economista/" target="_blank" rel="noopener">
+      <div class="note-src">El Cronista</div>
+      <div class="note-title">Dólar: qué va a pasar tras las elecciones y cómo podría reaccionar el mercado</div>
+      <div class="note-footer"><span class="note-date">Oct 2025</span><span class="note-arr">↗</span></div>
+    </a>
+    <a class="note-card" href="https://www.cronista.com/finanzas-mercados/el-mercado-cierra-posiciones-de-carry-trade-y-se-sienten-efectos-sobre-el-dolar-hasta-cuando/" target="_blank" rel="noopener">
+      <div class="note-src">El Cronista</div>
+      <div class="note-title">El mercado cierra posiciones de carry trade y se sienten efectos sobre el dólar</div>
+      <div class="note-footer"><span class="note-date">May 2026</span><span class="note-arr">↗</span></div>
+    </a>
+    <a class="note-card" href="https://www.lanacion.com.ar/economia/guerra-contra-la-inflacion-el-record-negativo-de-alberto-fernandez-que-no-se-observaba-desde-1991-nid18032022/" target="_blank" rel="noopener">
+      <div class="note-src">La Nación</div>
+      <div class="note-title">Guerra contra la inflación: el récord negativo que no se observaba desde 1991</div>
+      <div class="note-footer"><span class="note-date">Mar 2022</span><span class="note-arr">↗</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section-wrap dark" id="newsletter">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2>Lo Que Nadie<br><em>Te Dice.</em></h2>
+  </div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="nl-block">
+    <div>
+      <div class="nl-tag">Newsletter · Rafaela Capital</div>
+      <div class="nl-title">Análisis macroeconómico<br>sin eufemismos.</div>
+      <p class="nl-desc">
+        Cada edición toma un tema del mercado argentino y lo descompone hasta donde los medios no llegan — con datos del BCRA, posiciones concretas e instrumentos específicos.
+      </p>
+    </div>
+    <div>
+      <a href="mailto:fcamusso@rafaelacapital.com.ar" class="btn-primary">Suscribirme</a>
+    </div>
+  </div>
+
+  <!-- EDICIONES -->
+  <div class="nl-editions-label">Ediciones publicadas</div>
+  <div class="nl-editions">
+
+    <!-- EDICIÓN ESPECIAL JUNIO 2026 -->
+    <a class="nl-card nl-card-featured" href="file:///C:/Users/Usuario/Downloads/newsletter_ed_junio2026.pdf" target="_blank" rel="noopener">
+      <div class="nl-card-top">
+        <div class="nl-card-badge">Edición Especial · Junio 2026</div>
+        <span class="nl-card-arr">↗</span>
+      </div>
+      <div class="nl-card-title">Argentina tiene un nuevo motor exportador. No lo construyó el mercado financiero. Lo construyó la tierra.</div>
+      <div class="nl-card-desc">BCRA supera los USD 10.000M en compras, energía equipara al agro en el MLC, meta FMI sobrecumplida. El cambio estructural que el mercado tardó demasiado en ver.</div>
+      <div class="nl-card-tag">reservas · Vaca Muerta · FMI · ITCRM</div>
+    </a>
+
+    <!-- EDICIÓN ESPECIAL MAYO — BIG BANG -->
+    <a class="nl-card nl-card-featured" href="file:///C:/Users/Usuario/Downloads/newsletter_especial_echeq.pdf" target="_blank" rel="noopener">
+      <div class="nl-card-top">
+        <div class="nl-card-badge">Edición Especial · Mayo 2026</div>
+        <span class="nl-card-arr">↗</span>
+      </div>
+      <div class="nl-card-title">El "Big Bang" regulatorio de la CNV acaba de cambiar las reglas del juego.</div>
+      <div class="nl-card-desc">La Resolución General 1139 transforma la cuenta comitente en una cuenta corriente operativa. Tu empresa puede dejar de pagar el impuesto al cheque. Hoy mismo.</div>
+      <div class="nl-card-tag">echeq · RG 1139 · optimización fiscal</div>
+    </a>
+
+    <!-- EDICIÓN 6 -->
+    <a class="nl-card" href="file:///C:/Users/Usuario/Downloads/newsletter_ed6.pdf" target="_blank" rel="noopener">
+      <div class="nl-card-top">
+        <div class="nl-card-badge">Edición #6 · Mayo 2026</div>
+        <span class="nl-card-arr">↗</span>
+      </div>
+      <div class="nl-card-title">"El mercado de capitales no es para ricos. Es para los que se informan."</div>
+      <div class="nl-card-desc">Recorrido completo del mercado de capitales argentino — qué es, cómo se compone, qué instrumentos ofrece y por qué el interior del país está en posición inmejorable para aprovecharlo.</div>
+      <div class="nl-card-tag">mercado de capitales · interior · PyMEs</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section-wrap" id="contacto">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2>Consultas de medios<br><em>y asesoramiento.</em></h2>
+  </div>
+  <div class="contact-grid">
+    <a class="contact-card" href="https://twitter.com/FernandoCamusso" target="_blank" rel="noopener">
+      <div class="contact-type">Twitter / X</div>
+      <div class="contact-val">@FernandoCamusso</div>
+      <div class="contact-desc">Análisis de coyuntura en tiempo real</div>
+    </a>
+    <a class="contact-card" href="https://www.linkedin.com/in/fernandocamusso/" target="_blank" rel="noopener">
+      <div class="contact-type">LinkedIn</div>
+      <div class="contact-val">Fernando Camusso</div>
+      <div class="contact-desc">Perfil profesional y actividad reciente</div>
+    </a>
+    <a class="contact-card" href="mailto:fcamusso@rafaelacapital.com.ar">
+      <div class="contact-type">Email</div>
+      <div class="contact-val">fcamusso@<br>rafaelacapital.com.ar</div>
+      <div class="contact-desc">Consultas institucionales y de medios</div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-l">Fernando Camusso · Economista · Rafaela Capital</div>
+  <div class="footer-r">© 2026 · Todos los derechos reservados</div>
+</footer>
+
+
+
+</body></html>
