@@ -109,16 +109,13 @@
     }
 
     .hero-right img {
-      width: 70%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: top center;
       display: block;
       filter: grayscale(10%) contrast(1.05);
       opacity: 0.95;
-      position: absolute;
-      right: 0;
-      bottom: 0;
     }
 
     .hero-right::after {
@@ -319,7 +316,7 @@
     /* ── ABOUT ── */
     .about-layout {
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 5rem;
       align-items: start;
     }
@@ -886,7 +883,7 @@
     </div>
   </div>
   <div class="hero-right">
-    <img src="foto-hero.jpg" alt="Fernando Camusso" />
+    <img src="foto-about.jpg" alt="Fernando Camusso" />
   </div>
 </section>
 
@@ -919,10 +916,6 @@
     <h2>Economista. Analista.<br/><em>Director de Rafaela Capital.</em></h2>
   </div>
   <div class="about-layout">
-    <div class="about-photo-wrap">
-      <img src="foto-about.jpg" alt="Fernando Camusso — Rafaela Capital" />
-      <div class="about-photo-cap">Rafaela Capital · Santa Fe · Argentina</div>
-    </div>
     <div class="about-content">
       <p>
         Soy economista, director de <strong>Rafaela Capital</strong> y analista de mercados financieros con más de veinte años de experiencia. Mi especialidad es la <strong>volatilidad cambiaria</strong> y los momentos críticos del mercado argentino — los que exigen decisión cuando el consenso todavía duda.
@@ -934,6 +927,8 @@
         <p>"La macro argentina tiene una lógica propia. Entenderla es la diferencia entre reaccionar y anticipar."</p>
         <cite>— Fernando Camusso</cite>
       </div>
+    </div>
+    <div class="about-right">
       <div class="pillars-row">
         <div class="pillar">
           <div class="pillar-num">01</div>
